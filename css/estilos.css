@@ -1,0 +1,92 @@
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  display: grid;
+  grid-template: 1fr / 14% 5fr;
+}
+
+.menu{
+  display: grid;
+  grid-template-rows: 1fr repeat(2, 3fr);
+  padding: 1em;
+  background-color: #233141;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 14%;
+}
+
+.menu-title{
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  
+}
+.text-video{
+  color: indianred;
+}
+
+.playlist{
+  align-self: start;
+}
+.playlist-title{
+  display:flex;
+  align-items: flex-start;
+  font-size: 1.125em;
+}
+
+.playlist ol{ 
+  list-style: none;
+  padding: 0;
+}
+
+.songs{
+  margin: .5em 0;
+}
+
+.songs span{
+  margin-right: 1em;
+}
+.songs a{
+  text-decoration: none;
+  color: #fff;
+}
+.songs a:hover{
+  color: #5f92f1;
+}
+
+.friends{
+  align-self: start;
+}
+
+.friends-title{
+  font-size: 1.125em;
+}
+
+.friend-playlist{
+  display: flex;
+  margin: 1em 0;
+}
+
+.friend-playlist img{
+  width: 2.5em;
+  margin: 0;
+  margin-right: 1em;
+  border-radius: 4em;;
+}
+
+.friend-playlist span{
+  align-self: center;
+  width: 100%;
+}
+
+
+
+
+
+
