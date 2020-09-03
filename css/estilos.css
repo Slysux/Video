@@ -1,12 +1,12 @@
 body{
   margin: 0;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  font-family: Lato, Arial, sans-serif;
 }
 
 .container{
   display: grid;
-  grid-template: 1fr / 14% 5fr;
+  grid-template: 100% / 20em 5fr;
 }
 
 .menu{
@@ -15,10 +15,11 @@ body{
   padding: 1em;
   background-color: #233141;
   color: #fff;
-  position: absolute;
+  /* box-shadow: 3px 0px 5px 1px #0008; */
+  position: fixed;
   top: 0;
   bottom: 0;
-  min-width: 14%;
+  width: 20em;
 }
 
 .menu-title{
@@ -33,20 +34,26 @@ body{
 
 .playlist{
   align-self: start;
+  display: grid;
+  grid-template: 2em 1fr/ 1fr;
+   gap: 1em
 }
 .playlist-title{
-  display:flex;
-  align-items: flex-start;
+  align-self: center;
   font-size: 1.125em;
 }
 
 .playlist ol{ 
   list-style: none;
   padding: 0;
+  margin: 0;
+  align-self: center;
 }
 
 .songs{
   margin: .5em 0;
+  display: grid;
+  grid-template: 1fr / 2em 1fr;
 }
 
 .songs span{
@@ -57,32 +64,42 @@ body{
   color: #fff;
 }
 .songs a:hover{
-  color: #5f92f1;
+  color: #e26868;
 }
 
 .friends{
   align-self: start;
+  display: grid;
+  grid-template: 2em 1fr / 1fr;
+  gap: 1em;
 }
 
 .friends-title{
   font-size: 1.125em;
+  align-self: center;
+}
+.friends-title p {
+  margin: 0;
 }
 
 .friend-playlist{
-  display: flex;
+  align-self: center;
+}
+
+.each-friend{
+  display: grid;
+  grid-template: 1fr / 4em 1fr;
   margin: 1em 0;
 }
 
-.friend-playlist img{
+.each-friend img{
   width: 2.5em;
   margin: 0;
-  margin-right: 1em;
   border-radius: 4em;;
 }
 
-.friend-playlist span{
+.each-friend span{
   align-self: center;
-  width: 100%;
 }
 
 
