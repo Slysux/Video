@@ -107,7 +107,7 @@ body{
 .principal{
   grid-area: principal;
   display: grid;
-  grid-template: 45vh 10em 1fr / repeat(2, 1fr);
+  grid-template: 45vh repeat(2, 1fr) / repeat(2, 1fr);
   grid-template-areas: "video video"
                        "description description"
                        "comments suggestions";
@@ -159,20 +159,34 @@ body{
 
 .add-list{
   display: flex;
-  /* padding: 1em; */
+  font-size: 1em;
+  font-family: Lato, sans-serif;
+  padding:0;
+  cursor: pointer;
   width: 10em;
   height: 2.5em;
   border-radius: .8em;
-  border: none;
+  border: 1px solid #fff;
   background-color: indianred;
   color: #fff;
   justify-content: center;
   align-items: center;
 }
 
+.add-list:hover{
+  color: indianred;
+  background-color: #fff;
+  border: 1px solid indianred;
+}
+
+.add-list:focus{
+  outline: none;
+}
+
 .links{
   grid-area: links;
   align-self: center;
+  display: flex;
   padding: 0 1em;
 }
 
@@ -181,11 +195,78 @@ body{
   text-decoration: none;
   color: #375674;
   margin: 0 1em;
+  text-align: center;
+}
+
+.links a:hover{
+  color: #00152b;
+}
+
+.links p{
+  font-family: Lato, sans-serif;
+  font-size: .75em;
+  margin:0;
+  margin-top: .5em;
 }
 
 .tags{
   grid-area: tags;
+  display: flex;
+  align-items: center;
 }
+
+.tags a {
+  font-size: .75em;
+  text-decoration: none;
+  margin: 0 1em;
+  color: #fff;
+  padding: 0 .8em;
+  border-radius: 1em;
+  height: 2em;
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag1{
+  border: 1px solid #fff; 
+  background-color: #9c61cc;
+}
+.tag1:hover{
+  color: #9c61cc;
+  background: #fff;
+  border: 1px solid #9c61cc;
+}
+.tag2{ 
+  border: 1px solid #fff;
+  background-color: #57aa4e;
+}
+.tag2:hover{ 
+  color: #57aa4e;
+  background: #fff;
+  border: 1px solid #57aa4e;
+}
+.tag3{ 
+  border: 1px solid #fff;
+  background-color: #ccba13;
+}
+.tag3:hover{ 
+  color: #ccba13;
+  background: #fff;
+  border: 1px solid #ccba13;
+}
+.tag4{ 
+  border: 1px solid #fff;
+  background-color: #445dac;
+}
+.tag4:hover{ 
+  color: #445dac;
+  background: #fff;
+  border: 1px solid #445dac;
+}
+
+
 
 .comments{
   grid-area: comments;
