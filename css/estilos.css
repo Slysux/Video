@@ -107,7 +107,7 @@ body{
 .principal{
   grid-area: principal;
   display: grid;
-  grid-template: 45vh repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template: 45vh 10em 1fr / repeat(2, 1fr);
   grid-template-areas: "video video"
                        "description description"
                        "comments suggestions";
@@ -126,7 +126,7 @@ body{
 .description{
   grid-area: description;
   padding: 1em;
-  border-bottom: 1px solid red;
+  box-shadow: 0 .2em 3px 1px #dadada;
   display: grid;
   grid-template: repeat(3, 1fr) / 12em 1fr 2fr;
   grid-template-areas: "title title title"
@@ -266,11 +266,37 @@ body{
   border: 1px solid #445dac;
 }
 
-
-
 .comments{
   grid-area: comments;
+  display: grid;
+  grid-template-rows: 4em 5em 1fr;
+  padding: 1em 2em;
 }
+
+.comments-title{
+  font-size: 1.125em;
+  align-self: center;
+}
+
+.comments-title p{
+  margin: 0;
+}
+
+.add-comment{
+  padding: 0  3.5em;
+  margin: 0;
+  width: 80%;
+  height: 3em;
+  border-radius: .8em;
+  background-color: #e9e9e9;
+  background-image: url("../imagenes/Logo.jpg");
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position-y:center;
+  background-position-x: 1em;
+  border:none;
+}
+
 
 .suggestions{
   grid-area: suggestions;
