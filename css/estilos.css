@@ -10,7 +10,7 @@ p{
 
 .container{
   display: grid;
-  grid-template: 100% / 22em 5fr;
+  grid-template: 100% / 23em 5fr;
   grid-template-areas: "menu principal";
 }
 
@@ -18,10 +18,10 @@ p{
   grid-area: menu;
   display: grid;
   grid-template-rows: 1fr repeat(2, 3fr);
-  padding: 1em;
+  gap: 1em;
+  padding: 1em 1em 1em 2em;
   background-color: #233141;
   color: #fff;
-  /* box-shadow: 3px 0px 5px 1px #0008; */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -42,7 +42,7 @@ p{
   align-self: start;
   display: grid;
   grid-template: 2em 1fr/ 1fr;
-   gap: 1em
+  gap: 1em
 }
 .playlist-title{
   align-self: center;
@@ -57,7 +57,7 @@ p{
 }
 
 .songs{
-  margin: .5em 0;
+  margin: 1em 0;
   display: grid;
   grid-template: 1fr / 2em 1fr;
 }
@@ -92,11 +92,20 @@ p{
 .each-friend{
   display: grid;
   grid-template: 1fr / 4em 1fr;
-  margin: 1em 0;
+  margin: .5em 0;
+  padding: .5em 0;
+  width: 95%;
+}
+
+.each-friend:hover{
+  background:#1a2531;
+  cursor: pointer;
 }
 
 .each-friend img{
   width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
   margin: 0;
   border-radius: 4em;;
 }
@@ -329,6 +338,8 @@ p{
 .users-image img{
   grid-area: img;
   width: 3.125em;
+  height: 3.125em;
+  object-fit: cover;
   border-radius: 3em;
   align-self: center;
   justify-self: start;
